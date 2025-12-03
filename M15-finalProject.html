@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--Style element to set the overall look of the webpage-->
+    <style>
+    
+    .border{
+        position: relative;
+    }
+
+    #helpBtn{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 5px 5px;
+        font-size: 10px;
+    }
+
+    .border {
+        border: 80px solid transparent;
+        padding: 20px;
+
+        /*Calls file that is used for the images that make up the border*/
+        border-image-source: url("FinalProject-image.png");
+        
+        border-image-slice: 22%;      
+        border-image-width: 80px;
+        border-image-repeat: round;
+        border-style: solid;
+
+        max-width: 80%;
+        margin: 0 auto;              
+        box-sizing: border-box;
+
+    }
+
+    body {
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+
+        .group {
+    display: inline-block;
+    margin-right: 20px;
+    }
+
+        .group label {
+    margin-right: 4px;
+    }
+
+    </style>
+</head>
+
+<body>
+    
+    <!--All body elements are enclosed within the border div-->
+    <div class="border">
+    <h1>Task Management Master</h1>
+
+    <!--Task is entered in doTask input-->
+    <div class="group">
+    <label for="doTask">Enter Task:</label>
+    <input type="text" id="doTask">
+    </div>
+
+    <!--Task priority is chosen in taskPriority dropdown-->
+    <div class="group">
+    <label for="taskPriority">Task Priority:</label>
+    <select id="taskPriority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+    </select>
+    </div>
+
+    <!--User selects whether task is important with importantTask checkbox-->
+    <div class="group">
+    <label for="importantTask">Important? yes/no</label>
+    <input type="checkbox" id="importantTask" value="important">
+    </div>
+
+    <!--submitTask button triggers java script actions to store task info and 
+    present that info with taskmanager div-->
+    <input type="button" id="submitTask" class="group" value="Submit Task">
+    <div id="taskmanager"></div>
+
+    <!--Help button to explain use of app-->
+    <input type="button" id="helpBtn" class="group" value="Help?">
+
+    </div>
+    
+    <script src="M15-finalProject.js"></script>
+
+</body>
+</html>
