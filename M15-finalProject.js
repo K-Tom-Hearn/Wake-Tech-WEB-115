@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "an important one. Click submit to have your current task added to the " +
             "list of tasks which appears underneath the original task entry fields. " +
             "Important tasks will be highlighted in red, and once you select that a " +
-            "task is completed, a black line will cross it out. You also have the " +
+            "task is completed, a strike through will cross it out. You also have the " +
             "option to delete any of the tasks. Thanks for using Task Management Master!"
         )
     })
